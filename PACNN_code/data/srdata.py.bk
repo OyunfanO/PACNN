@@ -24,8 +24,7 @@ class SRData(data.Dataset):
         self.is_grey = args.is_grey
 
         if train:
-            #mat = h5py.File('../MWCNN/imdb_gray.mat')
-            mat = h5py.File('../MWCNN900/image_denoising.mat')
+            mat = h5py.File('../PACNN/image_denoising.mat')
             self.args.ext = 'mat'
             self.hr_data = mat['images']['labels'][:,:,:,:]
             self.num = self.hr_data.shape[0]
